@@ -14,21 +14,31 @@ import java.io.InputStreamReader;
  * @author ECC
  */
 public class Employee {
-    private String name;
     private int staff_id;
+    private String name;
     private String dept;
     private double rate;
     private long hrs_worked;
     private double salary;
     
+    public Employee(int id)
+    {
+        staff_id = id;
+    }
+    
+    public Employee(int id,String name)
+    {
+        staff_id = id;
+        this.name = name;
+    }
     
     public void enter() throws IOException
     {
         BufferedReader stdin = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Enter employees name: ");
-        name = stdin.readLine();
         System.out.println("Enter employees id: ");
         staff_id = Integer.parseInt(stdin.readLine());
+        System.out.println("Enter employees name: ");
+        name = stdin.readLine();
         System.out.println("Enter employees department: ");
         dept = stdin.readLine();
         System.out.println("Enter employees hourly rate: ");
@@ -41,8 +51,8 @@ public class Employee {
     
     public void display()
     {
-        System.out.println(name + "\t" + staff_id + "\t\t" + dept
-        + "\t" + rate + "\t" + hrs_worked + "\t" + salary);
+        System.out.println(staff_id + "\t\t" + name + "\t\t" + dept
+        + "\t\t" + rate + "\t" + hrs_worked + "\t" + salary);
     }
     public void calculateSalary()
     {

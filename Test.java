@@ -22,34 +22,42 @@ public class Test {
     public static void main(String[] args) throws IOException{
         // TODO code application logic here
         
-        Employee[] employeeArray = new Employee[5];
-        
+//        Employee[] employeeArray = new Employee[5];
+//              
+//        for(int ii = 0; ii < 5; ii++)
+//        {
+//            employeeArray[ii] = new Employee();
+//            employeeArray[ii].enter();          
+//        }
+//        
+//        System.out.println("STAFF ID\t\tNAME\t\tDEPT\t\tRATE\tHOURS\tSALARY");
+//        System.out.println("===============================");
+//        
+//        for(int ii = 0; ii < 5; ii++)
+//        {
+//            employeeArray[ii].display();
+//        }
 
         
-        for(int ii = 0; ii < 5; ii++)
-        {
-            employeeArray[ii] = new Employee();
-            employeeArray[ii].enter();
-            
+//        BufferedReader stdin = new BufferedReader(new InputStreamReader(System.in));
+//        String message;
+//        System.out.println("Enter a line of text:");
+//        message = stdin.readLine();
+//        System.out.println("You entered: \"" + message + "\"");
+        
 
-        }
-        
-        System.out.println("NAME\tSTAFF ID\tDEPT");
-        System.out.println("===============================");
-        
-        for(int ii = 0; ii < 5; ii++)
-        {
-            employeeArray[ii].display();
-        }
-
-        
-        BufferedReader stdin = new BufferedReader(new InputStreamReader(System.in));
-        String message;
-        System.out.println("Enter a line of text:");
-        message = stdin.readLine();
-        System.out.println("You entered: \"" + message + "\"");
-        
-        
+           Person a = new Person();
+           Person b = new Person();
+           
+           System.out.println("The income of person a is " + a.income());
+           System.out.println("The income of person b is " + b.income());
+           
+           a.initialize(10, 20);
+           b.initialize(8,30);
+           
+           System.out.println("The income of person a is " + a.income());
+           System.out.println("The income of person b is " + b.income());
+           
     }
     
 }
